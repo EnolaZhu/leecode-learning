@@ -1,6 +1,6 @@
 import Foundation
 // stack
-class Solution1 {
+class Solution20 {
     var map: [Character: Character] = [")": "(", "]": "[", "}": "{"]
     
     func isValid(_ s: String) -> Bool {
