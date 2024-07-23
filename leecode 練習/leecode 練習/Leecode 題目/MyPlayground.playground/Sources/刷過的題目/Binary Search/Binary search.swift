@@ -94,5 +94,23 @@ class BinarySearch {
         return res
     }
 
+    func findFirstBadVersion(_ versions: [Int]) -> Int {
+        var left = 0
+        var right = versions.count - 1
+        while left < right {
+            var mid = left + (right - left) / 2
+            if isBadVersion(mid) {
+                right = mid
+            } else {
+                left = mid + 1
+            }
+
+        }
+        return right
+    }
 
 }
+
+
+
+

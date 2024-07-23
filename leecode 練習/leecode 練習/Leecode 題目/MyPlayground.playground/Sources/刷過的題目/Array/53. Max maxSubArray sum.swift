@@ -13,7 +13,7 @@ class Solution53 {
         var maxSum = nums[0]
         var currentSum = nums[0]
 
-        for num in nums.removeFirst() {
+        for num in nums.dropFirst() {
             // 正是因为我们在寻找一个连续的子数组的最大和，所以我们必须比较当前元素和将当前元素添加到现有子数组和之间的较大值
             currentSum = max(num, currentSum + num)
             maxSum = max(currentSum, maxSum)
