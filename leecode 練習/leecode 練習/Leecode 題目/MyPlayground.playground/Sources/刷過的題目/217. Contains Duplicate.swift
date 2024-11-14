@@ -18,8 +18,10 @@ class Solution217 {
             if set.contains(num) {
                 return true
             } else {
-                return false
+                set.insert(num)
             }
         }
+
+        return false
     }
 }

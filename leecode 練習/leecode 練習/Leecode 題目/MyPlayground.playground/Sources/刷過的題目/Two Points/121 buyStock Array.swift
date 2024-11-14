@@ -15,7 +15,26 @@ class Solution121 {
         }
         return maxProfit
     }
-    
+
+    func max(_ prices: [Int]) -> Int {
+        guard prices.count > 1 else {
+            return 0
+        }
+
+        var maxProfit = 0
+        var minPrice = prices[0]
+
+        for price in prices {
+            if minPrice > price {
+                minPrice = price
+            } else {
+                maxProfit = Swift.max(maxProfit, price - minPrice)
+            }
+        }
+
+        return maxProfit
+    }
+
     // 動態規劃 通过一次遍历数组，在遍历的过程中不断更新最低价格和最大利润
     func maxProfit2(_ prices: [Int]) -> Int {
         guard prices.count > 1 else {

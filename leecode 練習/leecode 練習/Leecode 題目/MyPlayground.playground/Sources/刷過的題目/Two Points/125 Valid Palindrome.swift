@@ -38,4 +38,36 @@ class Solution2 {
         }
         return filteredString
     }
+
+    func isPalindrome1(_ s: String) -> Bool {
+
+        var s = filterString(s)
+        var array = Array(s)
+//
+        var i = 0
+        var j = array.count - 1
+        
+        while i < j {
+            if array[i] != array[j] {
+                return false
+            } else {
+                i += 1
+                j -= 1
+            }
+        }
+        return true
+
+//        while i < j {
+//            if array[i]
+//        }
+
+
+    }
+
+    // data filter
+    private func filterString(_ s: String) -> String {
+        return s.lowercased().filter {
+            $0.isNumber || $0.isLetter
+        }
+    }
 }
